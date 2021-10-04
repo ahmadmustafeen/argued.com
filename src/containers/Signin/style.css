@@ -1,0 +1,98 @@
+.auth-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303032;
+}
+.auth-inner-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.auth-inner-left-container img{
+    width: 250px;
+    aspect-ratio: 4;
+}
+.auth-inner-left-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.auth-inner-right-container{
+    width: 50%;
+    border-radius: 5px;
+    background-color: #5083ED;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.auth-inner-right-container-inner{
+    width: 80%;
+    height: 90%;
+}
+.auth-inner-right-header{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+
+}
+.auth-inner-right-form-container{
+    padding-top: 50px;
+}
+.input-field-container-auth{
+    width: 100%;
+    height: 60px;
+    /* background-color: rebeccapurple; */
+}
+.auth-inner-right-form-footer-container{
+    width: 100%;
+    height: 200px;
+    /* background-color: rebeccapurple; */
+}
+.auth-inner-right-form-footer-row{
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    padding: 5px 0;
+}
+.auth-inner-right-form-footer-row h4{
+    margin: auto;
+    padding: 0%;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.auth-inner-right-form-footer-submission{
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0;
+    padding-top: 30px;
+}
+.auth-inner-right-form-footer-submission button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: none;
+    font-weight: 400;
+    box-shadow: 1px 1px 10px rgba(65, 64, 64, 0.267);
+    background-color: #3C5A99;
+}
+.button-overlapping-icon-container{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -20px;
+    font-size: 9px ;
+    right: -80px;
+}

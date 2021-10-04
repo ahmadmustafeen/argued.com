@@ -1,0 +1,43 @@
+.inputwithlabel-container{
+    width: 100%;
+    height: 100%;
+}
+.inputwithlabel-container-label{
+    width: 100%;
+    height: fit-content;
+}
+.inputwithlabel-container-label h3{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 1px;
+}
+.inputwithlabel-container-inputContainer{
+    width: 100%;
+}
+.inputwithlabel-container-inputContainer input{
+    /* width: 100%; */
+    height: 30px;
+    padding:  0 5%;
+    width: 90%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border: 0px solid white;
+    border-bottom-width: 1px;
+    outline: none;
+}
+.eyeComponent-container{
+    width: fit-content;
+    margin-left: auto;
+    height: 20px;
+    right: 0px;
+    top: -50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-color: rebeccapurple; */
+    position: relative;
+}
