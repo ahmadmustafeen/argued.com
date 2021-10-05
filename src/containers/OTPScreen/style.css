@@ -23,8 +23,10 @@
 .auth-box input{
     background-color: transparent;
     border: none;
+    color: white;
     outline: none;
     width: 10px;
+    font-size: 16px;
 }
 .extra-width-120 button{
     width: 110px;
@@ -32,4 +34,36 @@
 .more-right-90{
     right:-90px
     /* left: -90%; */
+}
+
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    .auth-box{
+        /* background-color: red; */
+       width:75px;
+       height:85px
+    } 
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .auth-box{
+        /* background-color: red; */
+       width:50px;
+       height:60px
+    } 
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .auth-box{
+       width:50px;
+       height:60px
+    } 
+
+ }
+ 
+@media all and (max-width: 480px) {   
+    .auth-box{
+    width:50px;
+    height:60px
+ } 
 }

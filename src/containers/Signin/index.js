@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 import { InputWithLabel } from "../../components";
 
@@ -58,10 +59,12 @@ const Signin = (props) => {
             <div className="auth-inner-right-form-footer-container">
               <div className="auth-inner-right-form-footer-row">
                 <h4 style={{ color: theme.fontColor.greyText }}>*Forgot your password?</h4>
-                <a style={{ color: theme.fontColor.lightBlue }}>Reset Here</a>
+                <Link to="requestreset">
+                  <a style={{ color: theme.fontColor.lightBlue }}>Reset Here</a>
+                </Link>
               </div>
               <div className="auth-inner-right-form-footer-submission">
-                <button >
+                <button onClick={()=>alert("Login")}>
                   Login
                 </button>
                 <div className="button-overlapping-icon-container">
@@ -72,16 +75,18 @@ const Signin = (props) => {
                 </div>
 
               </div>
-            <div className="auth-inner-right-form-footer-create-form">
-              <h3 style={{color:theme.fontColor.whiteText}}>
-                Don't have an account yet?
-              </h3>
-              
-              <a href="">
-                Create one now
-              </a>
+              <div className="auth-inner-right-form-footer-create-form">
+                <h3 style={{ color: theme.fontColor.whiteText }}>
+                  Don't have an account yet?
+                </h3>
+                <Link to="signup">
+                  <a href="">
+                    Create one now
+                  </a>
+                </Link>
 
-            </div>
+
+              </div>
             </div>
           </div>
         </div>

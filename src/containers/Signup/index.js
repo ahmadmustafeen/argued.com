@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from 'react-router-dom'
 import { InputWithLabel } from "../../components";
 
 const theme = {
@@ -77,7 +77,7 @@ const Signup = (props) => {
                 <a style={{ color: theme.fontColor.lightBlue }}>Reset Here</a>
               </div> */}
               <div className="auth-inner-right-form-footer-submission">
-                <button >
+                <button  onClick={()=>alert("SIGNUP")}>
                   Submit
                 </button>
                 <div className="button-overlapping-icon-container">
@@ -93,10 +93,11 @@ const Signup = (props) => {
                 Already have an account?
               </h3>
               
-              <a href="">
-                Login Here
-              </a>
-
+              <Link to="signin">
+                <a href="">
+                  Login here
+                </a>
+              </Link>
             </div>
             </div>
           </div>

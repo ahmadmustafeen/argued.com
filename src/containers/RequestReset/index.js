@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle,faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from 'react-router-dom'
 import { InputWithLabel } from "../../components";
 
 const theme = {
@@ -79,9 +79,11 @@ const RequestReset = (props) => {
                             />
                         </div>
                         <div className="auth-inner-right-form-footer-submission">
-                            <button >
+                           <Link to="otp">
+                           <button >
                                 Reset
                             </button>
+                            </Link>
                             <div className="button-overlapping-icon-container">
                                 <FontAwesomeIcon
 
@@ -93,9 +95,11 @@ const RequestReset = (props) => {
                         <div className="auth-inner-right-form-footer-create-form  extra-padding-request-reset-bottom">
                           
 
-                            <a href="">
+                          <Link to="signin">
+                          <a href="">
                                 Go Back
                             </a>
+                          </Link> 
 
                         </div>
                     </div>
