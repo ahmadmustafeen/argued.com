@@ -11,7 +11,7 @@ const theme = {
   },
 };
 
-const Signin = (props) => {
+const Signup = (props) => {
   const [state, setState] = useState({});
   const onChange = (e) => {
     setState({
@@ -20,6 +20,7 @@ const Signin = (props) => {
     });
   };
   const [hidden, setHidden] = useState(true);
+  const [Chidden, setCHidden] = useState(true);
 
   return (
     <div className="auth-container">
@@ -31,14 +32,20 @@ const Signin = (props) => {
         <div className="auth-inner-right-container">
           <div className="auth-inner-right-container-inner">
             <div className="auth-inner-right-header">
-              <h2 style={{ color: theme.fontColor.whiteText }}>Log in</h2>
+              <h2 style={{ color: theme.fontColor.whiteText }}>Sign up</h2>
             </div>
             <div className="auth-inner-right-form-container">
+            <div className="input-field-container-auth">
+                <InputWithLabel
+                  name="username"
+                  label="*Username"
+                  onChange={onChange}
+                />
+              </div>
               <div className="input-field-container-auth">
                 <InputWithLabel
                   name="email"
-                  label="Email"
-                  value={state.email}
+                  label="*Email"
                   onChange={onChange}
                 />
               </div>
@@ -48,21 +55,30 @@ const Signin = (props) => {
                   name="password"
                   isSecure
                   isVisible={hidden}
-                  label="Password"
-                  value={state.email}
+                  label="*Password"
                   onChange={onChange}
                   onClickIcon={() => setHidden(!hidden)}
                 />
               </div>
+              <div className="input-field-container-auth">
+                <InputWithLabel
+                  name="confirm_password"
+                  isSecure
+                  isVisible={Chidden}
+                  label="*Confirm Password"
+                  onChange={onChange}
+                  onClickIcon={() => setCHidden(!Chidden)}
+                />
+              </div>
             </div>
             <div className="auth-inner-right-form-footer-container">
-              <div className="auth-inner-right-form-footer-row">
+              {/* <div className="auth-inner-right-form-footer-row">
                 <h4 style={{ color: theme.fontColor.greyText }}>*Forgot your password?</h4>
                 <a style={{ color: theme.fontColor.lightBlue }}>Reset Here</a>
-              </div>
+              </div> */}
               <div className="auth-inner-right-form-footer-submission">
                 <button >
-                  Login
+                  Submit
                 </button>
                 <div className="button-overlapping-icon-container">
                   <FontAwesomeIcon
@@ -74,11 +90,11 @@ const Signin = (props) => {
               </div>
             <div className="auth-inner-right-form-footer-create-form">
               <h3 style={{color:theme.fontColor.whiteText}}>
-                Don't have an account yet?
+                Already have an account?
               </h3>
               
               <a href="">
-                Create one now
+                Login Here
               </a>
 
             </div>
@@ -90,4 +106,4 @@ const Signin = (props) => {
   );
 };
 
-export default Signin;
+export default Signup;

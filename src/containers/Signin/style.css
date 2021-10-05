@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: poppins;
+}
+
 .auth-container{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
+    padding: 50px 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,10 +73,16 @@
     width: fit-content;
     flex-direction: row;
     padding: 5px 0;
+    color:#72EEFF;
+    align-items: center;
+    font-size: 11px;
 }
 .auth-inner-right-form-footer-row h4{
     margin: auto;
     padding: 0%;
+    font-style: italic;
+    color:rgb(231, 231, 231);
+    font-weight: 400;
     font-size: 14px;
     padding-right: 20px;
 }
@@ -92,7 +105,70 @@
     width: 10px;
     height: 10px;
     position: relative;
-    top: -20px;
-    font-size: 9px ;
-    right: -80px;
+    top: -25px;
+    font-size: 14px ;
+    right: -75px;
+}
+
+
+.auth-inner-right-form-footer-create-form{
+    padding-top: 20px;
+    width: 100%;
+}
+.auth-inner-right-form-footer-create-form h3{
+    font-size:12px;
+    font-weight: 400;
+    padding-bottom:5px;
+    margin:0px
+}
+.auth-inner-right-form-footer-create-form a{
+    font-size:11px;
+    margin:0px;
+    font-weight: 600;
+    color:yellow
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    *{
+        /* background-color: red; */
+    }
+}
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .auth-inner-container{
+        width: 85%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+    *{
+        /* background-color: red; */
+    }    .auth-inner-container{
+    flex-direction: column;
+}
+
+.auth-inner-right-container{
+    width: 100%;
+}
+
+ }
+ 
+@media all and (max-width: 480px) { 
+    .auth-inner-container{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .auth-inner-left-container{
+        padding-bottom: 20px;
+    }
+.auth-inner-left-container img{
+    width: 150px;
+}
+    .auth-inner-right-container{
+        width: 100%;
+    }
 }
