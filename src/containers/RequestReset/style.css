@@ -1,0 +1,46 @@
+.auth-inner-selection-field-container{
+    width: 100%;
+    height:40px;
+}
+.auth-inner-selection-field-container  input{
+    width: 40px;
+    height: 40px;
+    border: 1px;
+    font-size:18px
+    /* aspect-ratio: 1; */
+}
+.extra-padding-request-reset{
+    padding-top: 20px;
+}
+.extra-padding-request-reset-bottom{
+    padding-bottom: 50px;
+}
+.request-reset-text h4{
+    padding-top:30px;
+    font-style: normal;
+}
+
+
+
+/* CustomRadioButton */
+.CustomRadioButton{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.CustomRadioButton-icon{
+    font-size: 16px;
+    padding: 0;
+    margin:0;
+    padding: 0 4px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 2px solid white;
+}
+.CustomRadioButton-text{
+    padding-left: 20px;
+    color:white;
+    font-size: 12px;
+}
