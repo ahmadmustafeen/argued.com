@@ -1,0 +1,35 @@
+.no-padding-vertical{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.auth-inner-right-otp-container{
+    width: 100%;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.auth-box{
+    width: 100px;
+    /* background-color: red; */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 5px rgba(29, 29, 29, 0.027);
+}
+.auth-box input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 10px;
+}
+.extra-width-120 button{
+    width: 110px;
+}
+.more-right-90{
+    right:-90px
+    /* left: -90%; */
+}
