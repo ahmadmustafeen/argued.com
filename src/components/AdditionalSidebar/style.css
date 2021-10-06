@@ -1,0 +1,21 @@
+.Additionalsidebar-container{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    overflow:scroll;
+    align-items: center;
+    flex-direction: column;
+    left: 20%;
+    top: 0;
+    background-color: #303032;
+}
+.Additionalsidebar-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .Additionalsidebar-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

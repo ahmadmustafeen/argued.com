@@ -1,8 +1,9 @@
 export const theme = {
-    fontColor:{
-        whiteText:"white",
+    fontColor: {
+        whiteText: "white",
         // greyText:"rgb(100,100,100)"
-        greyText:"red",
-        lightBlue:"#72EEFF"
+        greyText: "red",
+        lightBlue: "#72EEFF",
+        darkBlue: "#5083ED"
     }
 }

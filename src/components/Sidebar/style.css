@@ -1,0 +1,19 @@
+.sidebar-container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 30px;
+    background-image: linear-gradient(#1C1C1D,#303032);
+    overflow-y: scroll;
+}
+.sidebar-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sidebar-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
