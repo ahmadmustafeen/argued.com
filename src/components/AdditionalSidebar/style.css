@@ -8,7 +8,7 @@
     flex-direction: column;
     left: 20%;
     top: 0;
-    background-color: #303032;
+    background-color: #303032a1;
 }
 .Additionalsidebar-container::-webkit-scrollbar {
     display: none;

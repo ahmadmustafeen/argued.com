@@ -3,14 +3,17 @@ import {
     Sidebar
 } from '../../components'
 import './style.css'
-
+import DashboardMainScreen from '../DashboardMainScreen'
 
 
 const Dashboard = props => {
     return (
         <div className={"dashboard-container"}>
             <Sidebar />
-            {/* <h2>asdasdasdasd</h2> */}
+            <div className={"dashboard-content"}>
+                <DashboardMainScreen/>
+
+            </div>
         </div>
     )
 }

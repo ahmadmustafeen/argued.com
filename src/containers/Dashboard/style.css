@@ -1,4 +1,10 @@
 .dashboard-container{
     background-color: #212020;
-    ;
+    display: flex;
+    flex-direction: row;
+}
+.dashboard-content{
+    width: 80%;
+    height: 100vh;
+    background-color: rebeccapurple;
 }
