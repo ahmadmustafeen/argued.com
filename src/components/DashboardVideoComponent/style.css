@@ -3,3 +3,18 @@
     height: 100%;
     /* background-color: red; */
 }
+.DashboardVideoComponent-header{
+    width: 100%;
+    padding: 10px 0;
+    /* background-color: rebeccapurple; */
+    padding-left: 20px;
+
+}
+.DashboardVideoComponent-content{
+    width: 100%;
+    height: 80%;
+}
+.DashboardVideoComponent-element{
+    width: 400px;
+    height: 100%;
+}
