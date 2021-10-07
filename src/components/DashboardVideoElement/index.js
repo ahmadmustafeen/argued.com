@@ -1,8 +1,23 @@
 import React from 'react'
 import { theme } from '../../constants/theme'
 import './style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
 
-
+const IconWithTitleCustom = props => {
+    const {
+        label = "label",
+        icon = faEyeSlash,
+    } = props
+    return (
+        <div className="IconWithTitleCustom-container">
+            <h3>
+                {label}
+            </h3>
+            <FontAwesomeIcon icon={icon} />
+        </div>
+    )
+}
 const DashboardVideoElement = props => {
     return (
         <div className="DashboardVideoElement-container">
@@ -22,9 +37,10 @@ const DashboardVideoElement = props => {
                     <div className="DashboardVideoElement-contentContainer-bottom-left">
                         <div className="DashboardVideoElement-contentContainer-bottom-left-left">
                             <div className="DashboardVideoElement-contentContainer-bottom-left-left-buttonContainer">
-
+                                <IconWithTitleCustom />
                             </div>
                             <div className="DashboardVideoElement-contentContainer-bottom-left-left-buttonContainer">
+                                <IconWithTitleCustom />
 
                             </div>
 
