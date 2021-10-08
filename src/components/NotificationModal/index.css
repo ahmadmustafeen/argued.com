@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     height: 60vh;
-    background-color: #5A5E5F    ;
+    background-color: #1C1C1D;    
 }
 .NotificationModal-header{
     width: 100%;
@@ -38,4 +38,74 @@
 .NotificationModal-header-heading-container h2{
     padding-left: 20px;
     font-size: 20px;
+}
+.NotificationModal-container{
+    width: 100%;
+    overflow:scroll;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.NotificationModal-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .NotificationModal-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.NotificationModal-item-container{
+    width: 90%;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #1C1C1D;
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    margin:10px 0;
+    height: 100px;
+}
+
+
+
+.NotificationModalComponent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.NotificationModalComponent-icon{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.NotificationModalComponent-text{
+    width: 70%;
+    height: 100%;
+    
+    
+}
+.NotificationModalComponent-text h4{
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.NotificationModalComponent-timespan{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+.NotificationModalComponent-timespan h4{
+    font-size: 11px;
+    font-weight: 400;
+    padding: 0 10px;
 }
