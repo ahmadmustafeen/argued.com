@@ -16,9 +16,16 @@ const DashboardVideoComponent = props => {
                 </h3>
             </div>
             <div className="DashboardVideoComponent-content">
-               <div className="DashboardVideoComponent-element">
-               <DashboardVideoElement />
-               </div>
+                {
+                    ["","","","","",""].map(item=>{
+                        return(
+                            <div className="DashboardVideoComponent-element">
+                            <DashboardVideoElement />
+                            </div>
+                        )
+                    })
+                }
+              
             </div>
         </div>
     )

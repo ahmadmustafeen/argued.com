@@ -12,6 +12,7 @@ const DashboardMainScreen = props => {
         <div className="DashboardMainScreen-container">
             <div className="DashboardMainScreen-component">
                 <DashboardVideoComponent label="Latest Videos" />
+                <DashboardVideoComponent label="Recent Videos" />
             </div>
 
         </div>
