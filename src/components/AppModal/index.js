@@ -1,14 +1,15 @@
 import React from 'react'
 import './style.css'
-import {WelcomeModal} from '../'
-import { NotificationModal } from '../'
+import { WelcomeModal,NotificationModal,RequestModal } from '../'
 
 
 const AppModal = props => {
     return (
         <div className="AppModal">
 {/* <WelcomeModal /> */}
-<NotificationModal />
+
+{/* <NotificationModal /> */}
+<RequestModal/>
         </div>
     )
 } 

@@ -1,0 +1,26 @@
+.RequestModal{
+    width: 30vw;
+    height: 40vh;
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    border-radius: 5px;
+}
+
+.request-item-container{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height:50px;
+}
+.request-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.request-label h4{
+    height: fit-content;
+    width: fit-content;
+}
+.request-icon{
+    font-size: 12px;
+}
