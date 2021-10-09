@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 
 import { InputWithLabel } from "../../components";
@@ -13,6 +14,8 @@ const theme = {
 };
 
 const Signin = (props) => {
+  const history = useHistory();
+
   const [state, setState] = useState({});
   const onChange = (e) => {
     setState({
@@ -64,7 +67,7 @@ const Signin = (props) => {
                 </Link>
               </div>
               <div className="auth-inner-right-form-footer-submission">
-                <button onClick={()=>alert("Login")}>
+                <button onClick={()=> history.push("/")}>
                   Login
                 </button>
                 <div className="button-overlapping-icon-container">
