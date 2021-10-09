@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {
     AppModal,
-    Sidebar
+    Sidebar,
+    DashboardHeader
 } from '../../components'
 import './style.css'
 import DashboardMainScreen from '../DashboardMainScreen'
@@ -26,20 +27,23 @@ const Dashboard = props => {
 
 
     //this calls modal to be shown
-    useState(() => {
-        setTimeout(() => {
-            dispatch(ActionWithPayload(SHOW_MODAL, { screenName: WELCOME_MESSAGE_MODAL }))
-        }, 2000)
-        setTimeout(() => {
-            dispatch(ActionWithoutPayload(DESTROY_MODAL))
-        }, 6000)
-    }, [])
+    // useState(() => {
+    //     setTimeout(() => {
+    //         dispatch(ActionWithPayload(SHOW_MODAL, { screenName: WELCOME_MESSAGE_MODAL }))
+    //     }, 2000)
+    //     setTimeout(() => {
+    //         dispatch(ActionWithoutPayload(DESTROY_MODAL))
+    //     }, 6000)
+    // }, [])
 
 
 
 
 
     return (
+        <>
+            <DashboardHeader />
+
         <div className={"dashboard-container"}>
             {isVisible && <AppModal />}
 
@@ -54,6 +58,7 @@ const Dashboard = props => {
 
             </div>
         </div>
+        </>
     )
 }
 
