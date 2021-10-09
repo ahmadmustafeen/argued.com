@@ -3,7 +3,6 @@ import './style.css'
 import { theme } from '../../constants/theme'
 import { CustomHeader } from '../MyContacts'
 import { faChevronCircleRight, faUserFriends, faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 

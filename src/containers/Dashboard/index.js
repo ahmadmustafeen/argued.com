@@ -6,6 +6,7 @@ import './style.css'
 import DashboardMainScreen from '../DashboardMainScreen'
 import MyContacts from '../MyContacts'
 import FAQ from '../FAQ'
+import MyGroups from '../MyGroups'
 
 
 const Dashboard = props => {
@@ -15,7 +16,8 @@ const Dashboard = props => {
             <div className={"dashboard-content"}>
                 {/* <DashboardMainScreen/> */}
                 {/* <MyContacts /> */}
-                <FAQ />
+                {/* <FAQ /> */}
+                <MyGroups />
 
             </div>
         </div>
