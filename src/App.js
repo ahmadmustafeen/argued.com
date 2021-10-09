@@ -11,7 +11,7 @@ import Dashboard from './containers/Dashboard';
 import {AppModal}  from './components'
 
 function App() {
-  const [isVisible,setIsVisible] = useState(true)
+  const [isVisible,setIsVisible] = useState(false)
   useState(()=>{
     // setTimeout(()=>{
     //   setIsVisible(true)

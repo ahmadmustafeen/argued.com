@@ -2,11 +2,12 @@ import React from 'react'
 import './style.css'
 import { theme } from '../../constants/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleLeft, faUserFriends, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-const CustomHeader = props => {
+import { faSearch, faUserFriends, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+export const CustomHeader = props => {
     const {
         icon,
         label,
+        searchIcon,
         buttonText,
         onClick,
         buttonIcon
@@ -22,17 +23,30 @@ const CustomHeader = props => {
                 <h2 style={{ color: theme.fontColor.whiteText }}>{label}</h2>
 
             </div>
-            <div className="MyContacts-container-header-container-right">
-                <a href="" className="MyContacts-container-header-container-right-button-container" style={{ backgroundColor: theme.fontColor.darkBlue }}>
-                    <h4 style={{ color: theme.fontColor.whiteText }}>
-                        {buttonText}
-                    </h4>
-                    <FontAwesomeIcon
+            <div className="MyContacts-container-header-container-right" style={searchIcon && { width: 'fit-content' }}>
+                {searchIcon ? (
+                    <div className="MyContactscomponent-searchBar-container" >
+                        <input />
+                        <div className="MyContactscomponent-searchBar-container-icon" >
+                            <FontAwesomeIcon
 
-                        icon={buttonIcon}
-                        color={theme.fontColor.whiteText}
-                    />
-                </a>
+                                icon={faSearch}
+                                color={theme.fontColor.darkBlue}
+                            />
+                        </div>
+                    </div>
+                ) : (
+                    <a href="" className="MyContacts-container-header-container-right-button-container" style={{ backgroundColor: theme.fontColor.darkBlue }}>
+                        <h4 style={{ color: theme.fontColor.whiteText }}>
+                            {buttonText}
+                        </h4>
+                        <FontAwesomeIcon
+
+                            icon={buttonIcon}
+                            color={theme.fontColor.whiteText}
+                        />
+                    </a>
+                )}
 
             </div>
         </div>
@@ -43,8 +57,8 @@ const CustomHeader = props => {
 
 const ContactTables = props => {
     const {
-name,
-date_connected
+        name,
+        date_connected
     } = props
     return (
         <div className="contacttables-container">
@@ -66,9 +80,9 @@ date_connected
                 <h3 style={{ color: theme.fontColor.whiteText }}>{date_connected}</h3>
             </div>
             <div className="contacttables-container-icon">
-<div className="contacttables-container-icon-container">
-<h4 style={{ color: theme.fontColor.whiteText }}>4</h4>
-</div>
+                <div className="contacttables-container-icon-container">
+                    <h4 style={{ color: theme.fontColor.whiteText }}>4</h4>
+                </div>
             </div>
 
         </div>
@@ -87,37 +101,37 @@ const MyContacts = props => {
             />
 
             <div className="MyContacts-table-container">
-            <div className="MyContacts-table-row">
-                    <ContactTables 
-                    name="Guy Hawkins"
-                    date_connected="17, Oct 2020"
+                <div className="MyContacts-table-row">
+                    <ContactTables
+                        name="Guy Hawkins"
+                        date_connected="17, Oct 2020"
                     />
                 </div>
                 <div className="MyContacts-table-row">
-                    <ContactTables 
-                    name="Guy Hawkins"
-                    date_connected="17, Oct 2020"
+                    <ContactTables
+                        name="Guy Hawkins"
+                        date_connected="17, Oct 2020"
                     />
                 </div>
                 <div className="MyContacts-table-row">
-                    <ContactTables 
-                    name="Guy Hawkins"
-                    date_connected="17, Oct 2020"
+                    <ContactTables
+                        name="Guy Hawkins"
+                        date_connected="17, Oct 2020"
                     />
                 </div>
                 <div className="MyContacts-table-row">
-                    <ContactTables 
-                    name="Guy Hawkins"
-                    date_connected="17, Oct 2020"
+                    <ContactTables
+                        name="Guy Hawkins"
+                        date_connected="17, Oct 2020"
                     />
                 </div>
                 <div className="MyContacts-table-row">
-                    <ContactTables 
-                    name="Guy Hawkins"
-                    date_connected="17, Oct 2020"
+                    <ContactTables
+                        name="Guy Hawkins"
+                        date_connected="17, Oct 2020"
                     />
                 </div>
-               
+
 
             </div>
 

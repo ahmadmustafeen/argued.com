@@ -63,6 +63,34 @@
 }
 
 
+.MyContactscomponent-searchBar-container{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    background-color: #1C1C1D; 
+    padding-left: 10px;
+    color: white;
+}
+
+.MyContactscomponent-searchBar-container input{
+    height: 100%;
+    width: 80%;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+.MyContactscomponent-searchBar-container-icon{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
 
 
 
