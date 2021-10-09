@@ -3,3 +3,58 @@
     height: 100%;
     margin: auto;
 }
+.FAQScreen-container-item{
+    width: 80%;
+    height: 40vh;
+}
+.FAQScreen-container-question{
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    background-color: #1C1C1D; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.FAQScreen-container-question-question{
+    width: 85%;
+
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.FAQScreen-container-question-question h3{
+    margin: 0%;
+    font-weight: 400;
+    font-size: 16px;
+}
+.FAQScreen-container-question-iconContainer{
+    width: 10%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.FAQScreen-container-answer{
+    display: none;
+    transition: display 2s ease-in;
+    background-color: rgb(41, 41, 41); 
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    padding: 10px 20px;
+}
+.isvisible{
+    display: flex;
+    transition: display 2s ease-in;
+}
+.FAQScreen-container-answer h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+.FaqComponentDropDown-mainContainer{
+    margin: 30px 0;
+}
