@@ -1,0 +1,32 @@
+
+.GeneralSuggestionModal-container{
+    height: 80vh;
+}
+
+
+.TopicSuggestionModal-content-inputArea-container{
+    height: 200px;
+    width: 80%;
+    box-shadow: 1px 1px 5px 5px rgba(15, 15, 15, 0.363);
+    background-color: #1C1C1D; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.general-suggestion-button-container{
+    width: fit-content;
+    padding-left:10%;
+    margin: 0;
+}
+.TopicSuggestionModal-content-inputArea-container textarea{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /* padding: 10px; */
+    overflow:auto;
+    color: white; resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
