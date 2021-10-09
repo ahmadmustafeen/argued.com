@@ -4,6 +4,7 @@ import {
 } from '../../components'
 import './style.css'
 import DashboardMainScreen from '../DashboardMainScreen'
+import MyContacts from '../MyContacts'
 
 
 const Dashboard = props => {
@@ -11,7 +12,8 @@ const Dashboard = props => {
         <div className={"dashboard-container"}>
             <Sidebar />
             <div className={"dashboard-content"}>
-                <DashboardMainScreen/>
+                {/* <DashboardMainScreen/> */}
+                <MyContacts />
 
             </div>
         </div>
