@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import { WelcomeModal,NotificationModal,RequestModal,OpportunityModal,TopicSuggestionModal } from '../'
+import { WelcomeModal,NotificationModal,RequestModal,OpportunityModal,TopicSuggestionModal,SubTopicModal } from '../'
 
 
 const AppModal = props => {
@@ -11,7 +11,8 @@ const AppModal = props => {
 {/* <NotificationModal /> */}
 {/* <RequestModal/> */}
 {/* <OpportunityModal /> */}
-<TopicSuggestionModal/>
+{/* <TopicSuggestionModal/> */}
+<SubTopicModal />
         </div>
     )
 } 
