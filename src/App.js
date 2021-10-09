@@ -11,14 +11,14 @@ import Dashboard from './containers/Dashboard';
 import {AppModal}  from './components'
 
 function App() {
-  const [isVisible,setIsVisible] = useState(false)
+  const [isVisible,setIsVisible] = useState(true)
   useState(()=>{
-    setTimeout(()=>{
-      setIsVisible(true)
-    },2000)
-    setTimeout(()=>{
-      setIsVisible(false)
-    },6000)
+    // setTimeout(()=>{
+    //   setIsVisible(true)
+    // },2000)
+    // setTimeout(()=>{
+    //   setIsVisible(false)
+    // },6000)
   },[])
   return (
     <>
