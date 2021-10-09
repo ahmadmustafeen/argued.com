@@ -51,10 +51,6 @@ const Dashboard = props => {
                     <Route path="/faq" component={FAQ} />
                     <Route path="/groups" component={MyGroups} />
                 </Switch>
-                {/* <DashboardMainScreen/>
-                {/* <MyContacts /> */}
-                {/* <FAQ /> */}
-                {/* <MyGroups /> */}
 
             </div>
         </div>
