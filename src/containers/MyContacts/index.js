@@ -26,7 +26,7 @@ export const CustomHeader = props => {
             <div className="MyContacts-container-header-container-right" style={searchIcon && { width: 'fit-content' }}>
                 {searchIcon ? (
                     <div className="MyContactscomponent-searchBar-container" >
-                        <input />
+                        <input placeHolder="Search Here" />
                         <div className="MyContactscomponent-searchBar-container-icon" >
                             <FontAwesomeIcon
 
