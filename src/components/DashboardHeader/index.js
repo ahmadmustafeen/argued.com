@@ -1,8 +1,8 @@
 import React from 'react'
 import './style.css'
-import {theme} from '../../constants/theme'
+import { theme } from '../../constants/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleRight, faBars, faTimesCircl,  } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight, faBars, faTimesCircl, faSearch, faChevronDown, } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -22,11 +22,40 @@ const DashboardHeader = props => {
                     </div>
                 </div>
                 <div className="dashboardheader-container-left-bottom">
-                    <h4 style={{color:theme.fontColor.darkBlue}}>Civil Arguments shapes the world we live in!</h4>
+                    <h4 style={{ color: theme.fontColor.darkBlue }}>Civil Arguments shapes the world we live in!</h4>
 
                 </div>
             </div>
             <div className="dashboardheader-container-middle">
+                <div className="dashboardheader-container-middle-searchbar">
+                    <div className="dashboardheader-container-middle-searchbar-container">
+                        <div className="dashboardheader-container-middle-searchbar-container-left">
+                       <h4 style={{color:theme.fontColor.whiteText}}>
+                           Videos
+                       </h4>
+                        <FontAwesomeIcon icon={faChevronDown}
+                                color={theme.fontColor.darkBlue}
+                            />
+                        </div>
+                        <div className="dashboardheader-container-middle-searchbar-container-middle">
+                            <input 
+                            style={{color:theme.fontColor.whiteText}}
+                            placeholder="Type anything here" />
+                        </div>
+                        <div className="dashboardheader-container-middle-searchbar-container-right">
+                            <FontAwesomeIcon icon={faSearch}
+                                color={theme.fontColor.darkBlue}
+                            />
+                        </div>
+                    </div>
+
+                </div>
+                <div className="dashboardheader-container-middle-icons">
+
+                </div>
+                <div className="dashboardheader-container-middle-activity">
+
+                </div>
 
             </div>
             <div className="dashboardheader-container-right">
