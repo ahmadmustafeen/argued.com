@@ -6,9 +6,11 @@ import { faChevronCircleRight, faCircle, faBars, faEye, faSearch, faChevronDown,
 import { Button, Popover, Typography } from '@material-ui/core'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithPayload } from '../../redux/actions'
-import { SHOW_MODAL } from '../../redux/actionTypes'
+import { CHANGE_SIDEBAR, SHOW_MODAL } from '../../redux/actionTypes'
 import { NOTIFICATION_MODAL, REQUESTS_MODAL } from '../../constants/ModalNames'
 import './popover.css'
+import { useHistory } from 'react-router-dom';
+
 
 const DashboardHeader = props => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,7 +30,7 @@ const DashboardHeader = props => {
     const { store, dispatch } = UseReduxHook()
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
-
+const history = useHistory()
     const [state, setState] = useState("Videos")
 
     return (
@@ -37,13 +39,14 @@ const DashboardHeader = props => {
                 <div className="dashboardheader-container-left-top">
                     <div className="dashboardheader-container-left-top-icon">
                         <FontAwesomeIcon icon={faBars}
+                        onClick={()=>dispatch(ActionWithPayload(CHANGE_SIDEBAR,!store?.SideBarReducer?.normal))}
                             color={theme.fontColor.whiteText}
                         />
                     </div>
-                    <div className="dashboardheader-container-left-top-img">
+                    <a className="dashboardheader-container-left-top-img" onClick={()=>history.push("/")}>
                         <img src={require("../../assets/logo-main.png").default} />
 
-                    </div>
+                    </a>
                 </div>
                 <div className="dashboardheader-container-left-bottom">
                     <h4 style={{ color: theme.fontColor.darkBlue }}>Civil Arguments shapes the world we live in!</h4>

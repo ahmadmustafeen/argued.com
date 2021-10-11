@@ -35,6 +35,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 }
 .dashboardheader-container-left-top-img img{
     width: 150px;
