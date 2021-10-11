@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import { theme } from '../../constants/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleRight, faBars, faTimesCircl, faSearch, faChevronDown, } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight, faBars, faEye, faSearch, faChevronDown, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { Button, Popover, Typography } from '@material-ui/core'
 
 
@@ -82,10 +82,31 @@ const DashboardHeader = props => {
 
                 </div>
                 <div className="dashboardheader-container-middle-icons">
+                    <div className="dashboardheader-container-middle-icons-left">
+                        <FontAwesomeIcon
+                            icon={faEye}
+                            color={theme.fontColor.greyText}
+                        />
+                        <FontAwesomeIcon
+                            icon={faBriefcase}
+                            color={theme.fontColor.greyText}
 
+                        />
+                    </div>
+                    <div className="dashboardheader-container-middle-icons-right">
+                        <div className="dashboardheader-container-middle-icons-right-imgContainer">
+
+                        </div>
+                    </div>
                 </div>
                 <div className="dashboardheader-container-middle-activity">
+                    <h4 style={{color:theme.fontColor.whiteText}}>Activity 7%</h4>
+                    <div className="dashboardheader-container-middle-activity-mainContainer">
+                        <div className="dashboardheader-container-middle-activity-mainContainer-filler" style={{width:'17%'}}>
 
+                        </div>
+                        
+                    </div>
                 </div>
 
             </div>
