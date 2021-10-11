@@ -7,6 +7,8 @@ import { useHistory } from 'react-router-dom';
 
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { theme } from '../../constants/theme'
+import { ActionWithPayload } from '../../redux/actions'
+import { CHANGE_SIDEBAR, SHOW_MODAL } from '../../redux/actionTypes'
 
 
 
@@ -49,8 +51,8 @@ const Sidebar = props => {
 
         }
     }
-    
-  const history = useHistory();
+
+    const history = useHistory();
     return (
         (store.SideBarReducer.normal ? <div className="sidebar-container" >
             {DATA.map(item => {
@@ -63,77 +65,79 @@ const Sidebar = props => {
                 visible={showsidebar} data={selectedData} />
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
         </div> :
-            <div className="custom-sideBar-container">
-                <div className="custom-sideBar">
-                    <FontAwesomeIcon icon={faEye}
-                        color={theme.fontColor.whiteText}
-                    />
-                    <h3 style={{ color: theme.fontColor.whiteText }}>
-                        Viewers
-                    </h3>
-                    <FontAwesomeIcon icon={faChevronRight}
-                        color={theme.fontColor.whiteText}
-                    />
-                </div>
-                <div className="custom-sideBar-box">
-                    <a className="custom-sideBar"  onClick={()=>history.push("/")}>
-                        <FontAwesomeIcon icon={faChartLine}
+                <a className="custom-sideBar-container" 
+                 onPointerOut={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}>
+                    <div className="custom-sideBar">
+                        <FontAwesomeIcon icon={faEye}
                             color={theme.fontColor.whiteText}
                         />
                         <h3 style={{ color: theme.fontColor.whiteText }}>
-                            Dashboard
+                            Viewers
                         </h3>
                         <FontAwesomeIcon icon={faChevronRight}
                             color={theme.fontColor.whiteText}
                         />
-                    </a>
-                    <a className="custom-sideBar"  onClick={()=>history.push("/contacts")}>
-                        <FontAwesomeIcon icon={faAddressBook}
-                       
+                    </div>
+                    <div className="custom-sideBar-box">
+                        <a className="custom-sideBar" onClick={() => history.push("/")}>
+                            <FontAwesomeIcon icon={faChartLine}
+                                color={theme.fontColor.whiteText}
+                            />
+                            <h3 style={{ color: theme.fontColor.whiteText }}>
+                                Dashboard
+                            </h3>
+                            <FontAwesomeIcon icon={faChevronRight}
+                                color={theme.fontColor.whiteText}
+                            />
+                        </a>
+                        <a className="custom-sideBar" onClick={() => history.push("/contacts")}>
+                            <FontAwesomeIcon icon={faAddressBook}
+
+                                color={theme.fontColor.whiteText}
+                            />
+                            <h3 style={{ color: theme.fontColor.whiteText }}>
+                                My Contacts
+                            </h3>
+                            <FontAwesomeIcon icon={faChevronRight}
+                                color={theme.fontColor.whiteText}
+                            />
+                        </a>
+                        <a className="custom-sideBar" onClick={() => history.push("/groups")}>
+                            <FontAwesomeIcon icon={faUsers}
+                                color={theme.fontColor.whiteText}
+                            />
+                            <h3 style={{ color: theme.fontColor.whiteText }}>
+                                My Group
+                            </h3>
+                            <FontAwesomeIcon icon={faChevronRight}
+                                color={theme.fontColor.whiteText}
+                            />
+                        </a>
+                    </div>
+                    <div className="custom-sideBar">
+                        <FontAwesomeIcon icon={faCloud}
                             color={theme.fontColor.whiteText}
                         />
                         <h3 style={{ color: theme.fontColor.whiteText }}>
-                            My Contacts
+                            Become a Presenter
                         </h3>
                         <FontAwesomeIcon icon={faChevronRight}
                             color={theme.fontColor.whiteText}
                         />
-                    </a>
-                    <a className="custom-sideBar"   onClick={()=>history.push("/groups")}>
-                        <FontAwesomeIcon icon={faUsers}
+                    </div>
+                    <div className="custom-sideBar">
+                        <FontAwesomeIcon icon={faCloud}
                             color={theme.fontColor.whiteText}
                         />
                         <h3 style={{ color: theme.fontColor.whiteText }}>
-                            My Group
+                            Help us Help us
                         </h3>
                         <FontAwesomeIcon icon={faChevronRight}
                             color={theme.fontColor.whiteText}
                         />
-                    </a>
-                </div>
-                <div className="custom-sideBar">
-                    <FontAwesomeIcon icon={faCloud}
-                        color={theme.fontColor.whiteText}
-                    />
-                    <h3 style={{ color: theme.fontColor.whiteText }}>
-                        Become a Presenter
-                    </h3>
-                    <FontAwesomeIcon icon={faChevronRight}
-                        color={theme.fontColor.whiteText}
-                    />
-                </div>
-                <div className="custom-sideBar">
-                    <FontAwesomeIcon icon={faCloud}
-                        color={theme.fontColor.whiteText}
-                    />
-                    <h3 style={{ color: theme.fontColor.whiteText }}>
-                        Help us Help us
-                    </h3>
-                    <FontAwesomeIcon icon={faChevronRight}
-                        color={theme.fontColor.whiteText}
-                    />
-                </div>
-            </div>)
+                    </div>
+                </a>
+        )
     )
 }
 

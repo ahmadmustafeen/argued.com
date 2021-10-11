@@ -1,7 +1,9 @@
 .dashboardheader-container{
     width: 100%;
     height: 75px;
+    position: fixed;
     display: flex;
+    z-index: 9999;
     background-color: #212020;
     flex-direction: row;
 }

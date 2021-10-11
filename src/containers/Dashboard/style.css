@@ -1,12 +1,12 @@
 .dashboard-container{
     background-color: #212020;
     display: flex;
+    padding-top:75px;
     flex-direction: row;
 }
 .dashboard-content{
-    width: 80%;
+    width: 75%;
     min-height: 140vh;
     height: fit-content;
-    padding-top: 40px;
     /* background-color: rebeccapurple; */
 }
