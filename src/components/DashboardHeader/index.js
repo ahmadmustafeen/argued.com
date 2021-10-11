@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import { theme } from '../../constants/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleRight, faBars, faEye, faSearch, faChevronDown, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight, faBars, faEye, faSearch, faChevronDown, faBriefcase, faUser, faBell } from '@fortawesome/free-solid-svg-icons'
 import { Button, Popover, Typography } from '@material-ui/core'
 
 
@@ -100,18 +100,53 @@ const DashboardHeader = props => {
                     </div>
                 </div>
                 <div className="dashboardheader-container-middle-activity">
-                    <h4 style={{color:theme.fontColor.whiteText}}>Activity 7%</h4>
+                    <h4 style={{ color: theme.fontColor.whiteText }}>Activity 7%</h4>
                     <div className="dashboardheader-container-middle-activity-mainContainer">
-                        <div className="dashboardheader-container-middle-activity-mainContainer-filler" style={{width:'17%'}}>
+                        <div className="dashboardheader-container-middle-activity-mainContainer-filler" style={{ width: '17%' }}>
 
                         </div>
-                        
+
                     </div>
                 </div>
 
             </div>
             <div className="dashboardheader-container-right">
+                <div className="dashboardheader-container-right-left">
+                    <div className="dashboardheader-container-right-left-iconContainer">
+                        <FontAwesomeIcon
+                            icon={faUser}
+                            color={theme.fontColor.whiteText}
+                        />
+                        <div className="dashboardheader-container-right-left-iconContainer-counterContainer" style={{ backgroundColor: theme.fontColor.darkBlue }}>
+                            <h5 style={{ color: theme.fontColor.whiteText }}>2</h5>
 
+                        </div>
+                    </div>
+                    <div className="dashboardheader-container-right-left-iconContainer">
+                        <FontAwesomeIcon
+                            icon={faBell}
+                            color={theme.fontColor.whiteText}
+                        />
+                        <div className="dashboardheader-container-right-left-iconContainer-counterContainer" style={{ backgroundColor: theme.fontColor.darkBlue }}>
+                            <h5 style={{ color: theme.fontColor.whiteText }}>2</h5>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div className="dashboardheader-container-right-right">
+                    <div className="dashboardheader-container-right-right-imgContainer">
+                        <div className="dashboardheader-container-right-right-img">
+                            <img src={require("../../assets/testing.jpg").default} />
+
+                        </div>
+                    </div>
+                    <div className="dashboardheader-container-right-right-nameContainer">
+                        <h3 style={{ color: theme.fontColor.whiteText }}>Welcome back</h3>
+                        <h4 style={{ color: theme.fontColor.whiteText }}>Ester Harvard</h4 >
+
+                    </div>
+                </div>
             </div>
         </div>
     )
