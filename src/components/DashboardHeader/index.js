@@ -4,6 +4,10 @@ import { theme } from '../../constants/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight, faBars, faEye, faSearch, faChevronDown, faBriefcase, faUser, faBell } from '@fortawesome/free-solid-svg-icons'
 import { Button, Popover, Typography } from '@material-ui/core'
+import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
+import {ActionWithPayload} from '../../redux/actions'
+import {SHOW_MODAL} from '../../redux/actionTypes'
+import {NOTIFICATION_MODAL,REQUESTS_MODAL} from '../../constants/ModalNames'
 
 
 const DashboardHeader = props => {
@@ -35,6 +39,7 @@ const DashboardHeader = props => {
 <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
 </Popover>
   */}
+  const {store,dispatch} = UseReduxHook()
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
@@ -114,7 +119,8 @@ const DashboardHeader = props => {
                 <div className="dashboardheader-container-right-left">
                     <div className="dashboardheader-container-right-left-iconContainer">
                         <FontAwesomeIcon
-                            icon={faUser}
+                        onClick={()=>dispatch(ActionWithPayload(SHOW_MODAL, { screenName: REQUESTS_MODAL }))}
+                        icon={faUser}
                             color={theme.fontColor.whiteText}
                         />
                         <div className="dashboardheader-container-right-left-iconContainer-counterContainer" style={{ backgroundColor: theme.fontColor.darkBlue }}>
@@ -124,6 +130,7 @@ const DashboardHeader = props => {
                     </div>
                     <div className="dashboardheader-container-right-left-iconContainer">
                         <FontAwesomeIcon
+                        onClick={()=>dispatch(ActionWithPayload(SHOW_MODAL, { screenName: NOTIFICATION_MODAL }))}
                             icon={faBell}
                             color={theme.fontColor.whiteText}
                         />

@@ -1,21 +1,29 @@
 import React from "react";
 import "./index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCross, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faTimesCircle, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { theme } from "../../constants/theme";
+
+import { ActionWithoutPayload } from '../../redux/actions'
+import { DESTROY_MODAL } from '../../redux/actionTypes'
+import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 const NotificationModalComponent = props => {
   const {
     text,
     time
 
   } = props
+
   return (
     <div className="NotificationModalComponent">
       <div className="NotificationModalComponent-icon">
-        <FontAwesomeIcon
-          icon={faChevronCircleRight}
-          color={theme.fontColor.darkBlue}
-        />
+        <div className="NotificationModalComponent-iconContainer">
+          <FontAwesomeIcon
+            icon={faBell}
+            color={"white"}
+          />
+        </div>
+
       </div>
       <div className="NotificationModalComponent-text">
         <h4 style={{ color: theme.fontColor.whiteText }}>{text}</h4>
@@ -47,15 +55,20 @@ const NOTIFICATIONS = [{
 
 }]
 const NotificationModal = (props) => {
+  
+  const { store, dispatch } = UseReduxHook()
   return (
     <div className="NotificationModal">
       <div className="NotificationModal-header">
         <div className="NotificationModal-header-cross-container">
-          <FontAwesomeIcon icon={faCross} color={"#5083ED"} />
+          <FontAwesomeIcon icon={faTimesCircle} color={"#5083ED"} 
+            onClick={()=>dispatch(ActionWithoutPayload(DESTROY_MODAL))}
+          
+          />
 
         </div>
         <div className="NotificationModal-header-heading-container">
-          <FontAwesomeIcon icon={faCross} color={"#5083ED"} />
+          <FontAwesomeIcon icon={faBell} color={"#5083ED"} />
           <h2 style={{ color: theme.fontColor.whiteText }}>Notifications</h2>
 
         </div>
@@ -63,19 +76,19 @@ const NotificationModal = (props) => {
       </div>
       <div className="NotificationModal-container">
         {
-          NOTIFICATIONS.map(item=>{
-            return(
+          NOTIFICATIONS.map(item => {
+            return (
               <div className="NotificationModal-item-container">
-              <NotificationModalComponent
-                text={item.label}
-                time={item.time}
-              />
-    
-            </div>
+                <NotificationModalComponent
+                  text={item.label}
+                  time={item.time}
+                />
+
+              </div>
             )
           })
         }
-      
+
 
       </div>
     </div>
