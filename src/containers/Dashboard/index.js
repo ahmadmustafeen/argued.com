@@ -10,6 +10,7 @@ import MyContacts from '../MyContacts'
 import FAQ from '../FAQ'
 import MyGroups from '../MyGroups'
 import MyProfile from '../MyProfile'
+import ChatScreen from '../ChatScreen'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
 import { DESTROY_MODAL, SHOW_MODAL } from '../../redux/actionTypes'
@@ -50,13 +51,14 @@ const Dashboard = props => {
 
             <Sidebar />
             <div className={"dashboard-content"}>
-                <Switch>
+                {/* <Switch>
                     <Route path="/" exact component={DashboardMainScreen} />
                     <Route path="/contacts" component={MyContacts} />
                     <Route path="/faq" component={FAQ} />
                     <Route path="/groups" component={MyGroups} />
                     <Route path="/profile" component={MyProfile} />
-                </Switch>
+                </Switch> */}
+                <ChatScreen />
 
             </div>
         </div>
