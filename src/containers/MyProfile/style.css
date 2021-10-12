@@ -3,3 +3,105 @@
     height: 80vh;
     margin: auto;
 }
+.profilePageContainer-upload_image_container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profilePageContainer-upload_image_container_img{
+    width: 10%;
+    display: flex;
+    /* justify-content: center; */
+    height: 100%;
+    align-items: center;
+}
+.profilePageContainer-upload_image_container_img img{
+    width:75px;
+    aspect-ratio: 1;
+    border-radius: 100px;
+}
+.profilePageContainer-upload_image_container h2{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0%;
+}
+
+
+.profilePageInputContainer-boxContainer{
+    width: 90%;
+    margin-top: 50px;
+    height: fit-content;
+    box-shadow: 1px 1px 8px 8px rgba(22, 22, 22, 0.163);
+
+}
+
+.profilePageInputContainer-box{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.profilePageInputContainer-box-left{
+    width: 66.666%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.profilePageInputContainer-box-right{
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.profilePageInputContainer-box-itemRow{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputItemContainer{
+    width: 45%;
+    height: 75px;
+}
+.inputItemContainer-headingContainer{
+    height: 30px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.inputItemContainer-headingContainer h3{
+    font-size: 12px;
+    font-weight: 400;
+    /* height: 50px; */
+}
+.inputItemContainer input{
+    width: 98%;
+    padding: 0 4px;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    background-color: #444444;
+    color: white;
+    outline: none;
+}
+.inputItemContainer input::placeholder{
+    font-size: 11px;
+    color: white;
+    padding-left: 20px;
+}
+.single-item-profilePageInputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full-width-inputItemContainer{
+    width: 90%;
+}
