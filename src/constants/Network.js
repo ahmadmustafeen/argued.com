@@ -4,5 +4,7 @@ export const API_VERSION = '';
 export const API_ENDPOINTS = {
   signup: '/register',
   signin: '/login',
-  category:'/api/category'
+  category:'/api/category',
+  fetch_latest_video:'/api/opinion',
+
 }
