@@ -8,6 +8,7 @@ export const API_ENDPOINTS = {
   fetch_latest_video:'api/opinion',
   signin:'api/user/login',
   public_plans:'api/public/plans',
-  faq:'api/faq'
+  faq:'api/faq',
+  fetch_recent_video:'api/opinion/recently-viewed'
 
 }

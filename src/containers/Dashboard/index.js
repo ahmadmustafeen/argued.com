@@ -13,7 +13,7 @@ import MyProfile from '../MyProfile'
 import ChatScreen from '../ChatScreen'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
-import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_FAQ, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
+import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_FAQ, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, FETCH_VIEWED_VIDEOS, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
 import { WELCOME_MESSAGE_MODAL } from '../../constants/ModalNames'
 import { Switch, Route } from 'react-router-dom'
 
@@ -32,7 +32,8 @@ const Dashboard = props => {
         // dispatch(ActionWithPayload(FETCH_LATEST_VIDEO,{id:"5e3aa7559d265a745118f48e"}))
         // dispatch(ActionWithPayload(SIGN_IN,{username:"5e3aa7559d265a745118f48e",password:"sasdasd"}))
         // dispatch(ActionWithoutPayload(FETCH_PUBLIC_PLANS))
-        dispatch(ActionWithoutPayload(FETCH_FAQ))
+        // dispatch(ActionWithoutPayload(FETCH_FAQ))
+        dispatch(ActionWithoutPayload(FETCH_VIEWED_VIDEOS))
 
 
     },[])

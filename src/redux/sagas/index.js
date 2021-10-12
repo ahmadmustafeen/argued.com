@@ -1,11 +1,20 @@
 import { takeLatest, all, take } from 'redux-saga/effects';
-import { FETCH_CATEGORY, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, SIGN_IN, SIGN_UP,FETCH_FAQ } from '../actionTypes';
+import { 
+      FETCH_CATEGORY,
+      FETCH_LATEST_VIDEO,
+      FETCH_PUBLIC_PLANS,
+      SIGN_IN,
+      SIGN_UP,
+      FETCH_FAQ ,
+      FETCH_VIEWED_VIDEOS
+    } from '../actionTypes';
 import { fetchCategorySaga } from './FetchCategorySaga';
 import { fetchLatestVideoSaga } from './FetchLatestVideoSaga';
 import { signinSaga } from './SigninSaga';
 import { signupSaga } from './SignupSaga';
 import {fetchPublicPlanSaga} from './FetchPublicPlanSaga'
 import { fetchFaqSaga } from './FetchFaqSaga';
+import {fetchViewedVideoSaga} from './FetchViewedVideoSaga'
 
 
 function* actionWatcher() {
@@ -15,6 +24,7 @@ function* actionWatcher() {
   yield takeLatest(SIGN_UP, signupSaga)
   yield takeLatest(FETCH_PUBLIC_PLANS, fetchPublicPlanSaga)
   yield takeLatest(FETCH_FAQ,fetchFaqSaga)
+  yield takeLatest(FETCH_VIEWED_VIDEOS,fetchViewedVideoSaga)
 
 }
 
