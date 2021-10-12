@@ -35,6 +35,7 @@ const history = useHistory()
 
     return (
         <div className="dashboardheader-container">
+            <div className="dashboardheader-container-inner">
             <div className="dashboardheader-container-left">
                 <div className="dashboardheader-container-left-top">
                     <div className="dashboardheader-container-left-top-icon">
@@ -120,7 +121,7 @@ const history = useHistory()
                         <div className="dashboardheader-container-middle-searchbar-container-middle">
                             <input
                                 style={{ color: theme.fontColor.whiteText }}
-                                placeholder="Type anything here" />
+                                placeholder="Type anything here..." />
                         </div>
                         <div className="dashboardheader-container-middle-searchbar-container-right">
                             <FontAwesomeIcon icon={faSearch}
@@ -201,6 +202,8 @@ const history = useHistory()
                     </div>
                 </div>
             </div>
+            </div>
+           
         </div>
     )
 }

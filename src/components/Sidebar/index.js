@@ -13,9 +13,9 @@ import { CHANGE_SIDEBAR, SHOW_MODAL } from '../../redux/actionTypes'
 
 
 const DATA = [
-    { label: "First Amendmend " },
-    { label: "Second Amendmend " },
-    { label: "Third Amendmend " },
+    // { label: "First Amendmend " },
+    // { label: "Second Amendmend " },
+    // { label: "Third Amendmend " },
     { label: "Fourth Amendmend " },
     { label: "Fifth Amendmend " },
     { label: "Sixth Amendmend " }]
@@ -55,18 +55,20 @@ const Sidebar = props => {
     const history = useHistory();
     return (
         (store.SideBarReducer.normal ? <div className="sidebar-container" >
-            {DATA.map(item => {
+          
+          <div className={"sidebar-component-container"}>  {DATA.map(item => {
                 return (
                     <SidebarComponent {...item} selectedComponent={selectedData === item.label} onClick={() => onClickImage(item.label)} />
                 )
             })}
+            </div>
             <AdditionalSidebar
                 onClick={() => onClickImage("", true)}
                 visible={showsidebar} data={selectedData} />
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
         </div> :
                 <a className="custom-sideBar-container" 
-                 onPointerOut={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}>
+                 onPointerOver={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}>
                     <div className="custom-sideBar">
                         <FontAwesomeIcon icon={faEye}
                             color={theme.fontColor.whiteText}

@@ -4,7 +4,8 @@
     /* padding-top: 50px; */
 }
 .DashboardMainScreen-component{
-    width: 90%;
-    margin: auto;
+    width: 95%;
+    margin-left: 5%;
+    /* margin: auto; */
     height: 400px;
 }
