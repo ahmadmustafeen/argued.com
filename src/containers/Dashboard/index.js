@@ -13,7 +13,7 @@ import MyProfile from '../MyProfile'
 import ChatScreen from '../ChatScreen'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
-import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_LATEST_VIDEO, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
+import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
 import { WELCOME_MESSAGE_MODAL } from '../../constants/ModalNames'
 import { Switch, Route } from 'react-router-dom'
 
@@ -30,7 +30,8 @@ const Dashboard = props => {
     useEffect(()=>{
         // dispatch(ActionWithoutPayload(FETCH_CATEGORY))
         // dispatch(ActionWithPayload(FETCH_LATEST_VIDEO,{id:"5e3aa7559d265a745118f48e"}))
-        dispatch(ActionWithPayload(SIGN_IN,{username:"5e3aa7559d265a745118f48e",password:"sasdasd"}))
+        // dispatch(ActionWithPayload(SIGN_IN,{username:"5e3aa7559d265a745118f48e",password:"sasdasd"}))
+        dispatch(ActionWithoutPayload(FETCH_PUBLIC_PLANS))
 
 
     },[])
