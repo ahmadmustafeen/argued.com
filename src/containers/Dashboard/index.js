@@ -13,7 +13,7 @@ import MyProfile from '../MyProfile'
 import ChatScreen from '../ChatScreen'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
-import { DESTROY_MODAL, SHOW_MODAL } from '../../redux/actionTypes'
+import { DESTROY_MODAL, FETCH_CATEGORY, SHOW_MODAL } from '../../redux/actionTypes'
 import { WELCOME_MESSAGE_MODAL } from '../../constants/ModalNames'
 import { Switch, Route } from 'react-router-dom'
 
@@ -25,7 +25,12 @@ const Dashboard = props => {
 
     useEffect(() => {
         setIsVisible(UiModalReducer?.isVisible)
+        // dispatch(ActionWithoutPayload(FETCH_CATEGORY))
     }, [store])
+    useEffect(()=>{
+        dispatch(ActionWithoutPayload(FETCH_CATEGORY))
+
+    },[])
 
 
     //this calls modal to be shown
