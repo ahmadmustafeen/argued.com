@@ -9,6 +9,7 @@ import DashboardMainScreen from '../DashboardMainScreen'
 import MyContacts from '../MyContacts'
 import FAQ from '../FAQ'
 import MyGroups from '../MyGroups'
+import MyProfile from '../MyProfile'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
 import { DESTROY_MODAL, SHOW_MODAL } from '../../redux/actionTypes'
@@ -54,6 +55,7 @@ const Dashboard = props => {
                     <Route path="/contacts" component={MyContacts} />
                     <Route path="/faq" component={FAQ} />
                     <Route path="/groups" component={MyGroups} />
+                    <Route path="/profile" component={MyProfile} />
                 </Switch>
 
             </div>

@@ -1,12 +1,12 @@
 .Additionalsidebar-container{
-    width: 25%;
+    width: 20%;
     height: 100vh;
     position: fixed;
     display: none;
     overflow:scroll;
     align-items: center;
     flex-direction: column;
-    left: 25%;
+    left: 20%;
     top: 75px;
     background-color: #303032a1;
 }
@@ -19,3 +19,27 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  @media all and (min-width: 1024px) and (max-width: 1280px) { 
+    .Additionalsidebar-container{
+      left: 30%;
+      width: 30%;
+
+    }
+  }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+  .Additionalsidebar-container{
+    left: 30%;
+    width: 30%;
+
+  }
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .Additionalsidebar-container{
+   display: none !important;
+
+  }
+ }
+ 
+@media all and (max-width: 480px) { }
