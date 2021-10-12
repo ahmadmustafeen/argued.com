@@ -75,6 +75,7 @@ const history = useHistory()
                                     vertical: 'bottom',
                                     horizontal: 'left',
                                 }}
+                                style={{backgroundColor:'transparent'}}
                             >
                                 <div className="open-type-search-popover">
                                     <div className="open-type-search-popover-item">

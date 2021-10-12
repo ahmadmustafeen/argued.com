@@ -32,4 +32,8 @@
     flex-direction: column;
     
     }
+    
+    .dashboard-content{
+        width: 100%;
+    }
 }

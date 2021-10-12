@@ -13,9 +13,9 @@ import { CHANGE_SIDEBAR, SHOW_MODAL } from '../../redux/actionTypes'
 
 
 const DATA = [
-    // { label: "First Amendmend " },
-    // { label: "Second Amendmend " },
-    // { label: "Third Amendmend " },
+    { label: "First Amendmend " },
+    { label: "Second Amendmend " },
+    { label: "Third Amendmend " },
     { label: "Fourth Amendmend " },
     { label: "Fifth Amendmend " },
     { label: "Sixth Amendmend " }]

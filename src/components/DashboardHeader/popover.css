@@ -1,10 +1,15 @@
 .open-type-search-popover{
     width: 260px;
-    padding: 0 20px;
-    height: 200px;    
-    background-color: #1C1C1D; 
+    padding: 10px 20px;
 
+    z-index: 99999;
+    /* height: 150px;     */
+    background-color: #303032; 
 }
+    .MuiPopover-root {
+    margin-top: 40px;
+        
+    }
 .open-type-search-popover-item{
     display:flex;
     flex-direction: row;
