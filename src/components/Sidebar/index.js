@@ -68,7 +68,8 @@ const Sidebar = props => {
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
         </div> :
                 <a className="custom-sideBar-container" 
-                 onPointerOver={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}>
+                //  onPointerOver={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}
+                 >
                     <div className="custom-sideBar">
                         <FontAwesomeIcon icon={faEye}
                             color={theme.fontColor.whiteText}

@@ -98,7 +98,7 @@ const MyGroups = props => {
                 icon={faUserFriends}
                 buttonIcon={faChevronCircleRight}
                 label="How Can We Help You?"
-                buttonText="My Contact"
+                buttonText="Create Group"
             />
             <div className="MyContacts-table-container">
             <div className="MyContacts-table-row">
