@@ -7,6 +7,7 @@ export const API_ENDPOINTS = {
   category:'api/category',
   fetch_latest_video:'api/opinion',
   signin:'api/user/login',
-  public_plans:'api/public/plans'
+  public_plans:'api/public/plans',
+  faq:'api/faq'
 
 }
