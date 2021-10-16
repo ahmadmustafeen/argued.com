@@ -13,7 +13,7 @@
 
 
 .MyGroupsElement-container-img{
-    width: 7%;
+    width: 10%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,8 @@
 .MyGroupsElement-container-name h4{
     margin: 0;
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
 }
 .MyGroupsElement-container-purpose{
     
@@ -42,7 +43,7 @@
 }
 .MyGroupsElement-container-purpose h3{
     margin: 0;
-    font-size: 12px;
+    font-size: 11px;
     
     padding: 5px 0;
     padding-top:15px;
@@ -52,7 +53,7 @@
 .MyGroupsElement-container-purpose h4{
     font-weight: 400;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 .MyGroupsElement-container-joined{
     
@@ -66,14 +67,14 @@
     padding: 5px 0;
     padding-top:15px;
     margin: 0;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
 }
 
 .MyGroupsElement-container-joined h4{
     font-weight: 400;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 .MyGroupsElement-container-details{
     
@@ -86,14 +87,15 @@
 }
 .MyGroupsElement-container-details h3{
     margin: 0;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 11px;
     padding: 5px 0;
     padding-top:15px;
 }
 
 .MyGroupsElement-container-details-button{
     width: 100px;
-    height: 30px;
+    height: 20px;
     display: flex;
     font-size: 12px;
     flex-direction: row;
@@ -103,6 +105,44 @@
 }
 .MyGroupsElement-container-details-button h4{
     margin: 0;
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: 400;
     padding-right: 5px;
 }
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+.MyGroupsElement-container-details-button{
+    width: 80px;
+}
+.contacttables-container-img-container img{
+    width: 45px;
+}
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .MyGroupsElement-container-details-button{
+        width: 60px;
+    }
+    .contacttables-container-img-container img{
+        width: 45px;
+    }.myGroups{
+        width:95%;
+    }
+    
+     
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .MyGroupsElement-container-details-button{
+        width: 60px;
+    }
+    .contacttables-container-img-container img{
+        width: 45px;
+    }.myGroups{
+        width:95%;
+    }
+    
+    
+ }
+ 
+@media all and (max-width: 480px) { }

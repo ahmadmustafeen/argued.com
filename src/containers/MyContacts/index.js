@@ -10,7 +10,8 @@ export const CustomHeader = props => {
         searchIcon,
         buttonText,
         onClick,
-        buttonIcon
+        buttonIcon,
+        noButton
     } = props
     return (
         <div className="MyContacts-container-header-container">
@@ -23,7 +24,7 @@ export const CustomHeader = props => {
                 <h2 style={{ color: theme.fontColor.whiteText }}>{label}</h2>
 
             </div>
-            <div className="MyContacts-container-header-container-right" style={searchIcon && { width: 'fit-content' }}>
+          {noButton||  <div className="MyContacts-container-header-container-right" style={searchIcon && { width: 'fit-content' }}>
                 {searchIcon ? (
                     <div className="MyContactscomponent-searchBar-container" >
                         <input placeHolder="Search Here" />
@@ -48,7 +49,7 @@ export const CustomHeader = props => {
                     </a>
                 )}
 
-            </div>
+            </div>}
         </div>
     )
 }

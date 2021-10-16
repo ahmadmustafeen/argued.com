@@ -5,10 +5,15 @@
 }
 .DashboardVideoComponent-header{
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
+    padding-top: 30px;
     /* background-color: rebeccapurple; */
-    padding-left: 20px;
+    /* padding-left: 20px; */
 
+}
+.DashboardVideoComponent-header h3{
+    font-size: 16px;
+    margin: 0;
 }
 .DashboardVideoComponent-content{
     width: 100%;

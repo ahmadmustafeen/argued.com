@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 .MyContacts-container-header-container-left{
-    width: 30%;
+    /* width: 30%; */
     height: 100%;
     display: flex;
     font-size: 32px;
@@ -25,27 +25,31 @@
     font-size: 20px;
 }
 .MyContacts-container-header-container-right{
-    width: 10%;
+    /* width: 10%; */
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .MyContacts-container-header-container-right-button-container{
-    width: 150px;
+    width: fit-content;
+    padding: 0 20px;
     height: 30px;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     justify-content: space-around;
     align-items: center;
     font-size: 12px;
 }
+
 .MyContacts-container-header-container-right h4{
     font-size: 12px;
     font-weight: 400;
+    
     margin: 0;
     text-decoration: none;
-    padding:0;
+    padding-right:20px;
 }
 
 .MyContacts-table-container{
@@ -58,7 +62,7 @@
     height: 80px;    
     background-color: #212020;
     margin: 15px 0;
-    box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 5px 5px rgba(20, 20, 20, 0.3);
 
 }
 
@@ -163,8 +167,90 @@
     justify-content: center;
     align-items: center;
 border-radius: 100px;
-background-color: red;
+background-color: #5083ED;
 }
 .contacttables-container-icon-container h4{
     font-size: 11px;
 }
+.contacttables-container-img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+.MyContacts-container-header-container-left{
+    font-size: 28;
+}
+.MyContacts-container-header-container-left h2{
+    font-size: 18px;
+}
+
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px)  {
+
+    .MyContacts-container-header-container-left{
+        font-size: 24;
+        width: fit-content;
+    }
+    .MyContacts-container-header-container-left h2{
+        font-size: 14px;
+    }
+    .contacttables-container-img{
+        width: 15%;
+    }
+    .contacttables-container-name h4,.contacttables-container-connected h3{
+        font-size: 12px;
+    }
+    .contacttables-container-connected h2{
+        font-size: 9;
+    }
+    .contacttables-container-img-container img{
+        width: 40px;
+    }
+    .contacttables-container-icon-container{
+        width: 25px;
+        height: 25px;
+    }
+    .contacttables-container-icon-container h4{
+        font-size: 9px;
+    }
+     }
+    
+ 
+@media all and (min-width: 480px) and (max-width: 768px) 
+{
+   
+    .MyContacts-container-header-container-left{
+        font-size: 24;
+        width: fit-content;
+    }
+    .MyContacts-container-header-container-left h2{
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    .contacttables-container-img{
+        width: 15%;
+    }
+    .contacttables-container-name h4,.contacttables-container-connected h3{
+        font-size: 12px;
+    }
+    .contacttables-container-connected h2{
+        font-size: 9;
+    }
+    .contacttables-container-img-container img{
+        width: 30px;
+    }
+    .contacttables-container-icon-container{
+        width: 20px;
+        height: 20px;
+    }
+    .contacttables-container-icon-container h4{
+        font-size: 9px;
+    }
+     }
+ 
+@media all and (max-width: 480px) { }

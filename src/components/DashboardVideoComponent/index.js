@@ -11,7 +11,7 @@ const DashboardVideoComponent = props => {
     return (
         <div className="DashboardVideoComponent">
             <div className="DashboardVideoComponent-header">
-                <h3 style={{color:theme.fontColor.whiteText}}>
+                <h3 style={{color:theme.fontColor.greyText}}>
                     {label}
                 </h3>
             </div>

@@ -3,6 +3,9 @@ import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faPlusCircle, faUser, faUsers,faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { theme } from "../../constants/theme";
+import {ActionWithoutPayload} from '../../redux/actions'
+import {DESTROY_MODAL} from '../../redux/actionTypes'
+import {UseReduxHook} from '../../redux/customHooks/useReduxHook'
 
 
 const NOTIFICATIONS = [{
@@ -23,11 +26,14 @@ const NOTIFICATIONS = [{
 
 }]
 const RequestModal = (props) => {
+    const {store,dispatch} = UseReduxHook()
     return (
         <div className="NotificationModal RequestModal">
             <div className="NotificationModal-header">
                 <div className="NotificationModal-header-cross-container">
-                    <FontAwesomeIcon icon={faTimesCircle} color={"#5083ED"} />
+                    <FontAwesomeIcon icon={faTimesCircle} color={"#5083ED"}
+                    onClick={()=>dispatch(ActionWithoutPayload(DESTROY_MODAL))}
+                     />
 
                 </div>
                 <div className="NotificationModal-header-heading-container">

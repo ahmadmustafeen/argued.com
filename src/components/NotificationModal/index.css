@@ -83,7 +83,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+}
+.NotificationModalComponent-iconContainer{
+width: 40px;
+aspect-ratio: 1;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5083ED;
+border-radius: 60px;
 }
 
 .NotificationModalComponent-text{

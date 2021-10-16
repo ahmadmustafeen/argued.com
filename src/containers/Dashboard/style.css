@@ -1,12 +1,39 @@
 .dashboard-container{
     background-color: #212020;
     display: flex;
+    padding-top:75px;
     flex-direction: row;
 }
 .dashboard-content{
     width: 80%;
     min-height: 140vh;
     height: fit-content;
-    padding-top: 40px;
-    /* background-color: rebeccapurple; */
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    
+.dashboard-content{
+    width: 70%;
+}
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .dashboard-content{
+        width: 70%;
+    }
+    
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .dashboard-container{
+    flex-direction: column;
+    
+    }
+    
+    .dashboard-content{
+        width: 100%;
+    }
 }

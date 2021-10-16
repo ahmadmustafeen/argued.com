@@ -1,0 +1,12 @@
+.chatscreen-container{
+    width: 95%;
+    min-height: 80vh;
+    height: 100%;
+    background-color: red;
+    
+}
+.chatscreen-container-header
+{
+    background-color: red
+    ;
+}
