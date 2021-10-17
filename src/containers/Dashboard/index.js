@@ -62,14 +62,14 @@ const Dashboard = props => {
 
             <Sidebar />
             <div className={"dashboard-content"}>
-                {/* <Switch>
+                <Switch>
                     <Route path="/" exact component={DashboardMainScreen} />
                     <Route path="/contacts" component={MyContacts} />
                     <Route path="/faq" component={FAQ} />
                     <Route path="/groups" component={MyGroups} />
                     <Route path="/profile" component={MyProfile} />
-                </Switch> */}
-                <ChatScreen />
+                </Switch>
+                {/* <ChatScreen /> */}
 
             </div>
         </div>

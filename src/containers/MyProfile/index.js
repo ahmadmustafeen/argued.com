@@ -3,7 +3,7 @@ import './style.css'
 
 import { CustomHeader } from '../MyContacts'
 import { theme } from '../../constants/theme'
-import { faChevronCircleRight, faUser, faUserFriends, } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronCircleLeft, faChevronCircleRight, faUser, faUserFriends, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -151,11 +151,69 @@ const MyProfile = props => {
 
                             </div>
                         </div>
-                     
+
                     </div>
-                   
+
                 </div>
 
+            </div>
+            <div className="profilePageInputContainer-borderless-boxContainer">
+                <div className="profilePageInputContainer-borderless-boxContainer-top">
+                    <div className="profilePageInputContainer-borderless-boxContainer-top-touchButton">
+
+                    </div>
+                    <div className="profilePageInputContainer-borderless-boxContainer-top-textContainer">
+                        <h3 style={{color:theme.fontColor.whiteText}}>Enable Geographical area of interest</h3>
+                        <h4 style={{color:theme.fontColor.greyText}}>Enabling means you will only get videos from the selected Geography's you select</h4>
+
+
+                    </div>
+
+                </div>
+                <div className="profilePageInputContainer-borderless-boxContainer-bottom">
+                <div className="profileButtonWithresponsiveWidth" style={{backgroundColor:theme.fontColor.darkBlue}}>
+                        <h4 style={{color:theme.fontColor.whiteText}}>Topic of Interest</h4>
+
+                    </div>
+                    <div className="profileButtonWithresponsiveWidth" style={{backgroundColor:theme.fontColor.darkBlue}}>
+                        <h4 style={{color:theme.fontColor.whiteText}}>Geographical Location</h4>
+
+                    </div>
+                    <div className="profileButtonWithresponsiveWidth" style={{backgroundColor:theme.fontColor.darkBlue}}>
+                        <h4 style={{color:theme.fontColor.whiteText}}>Set Default Location</h4>
+
+                    </div>
+                      <div className="profileButtonWithresponsiveWidth" style={{backgroundColor:theme.fontColor.darkBlue}}>
+                        <h4 style={{color:theme.fontColor.whiteText}}>Select All Topics</h4>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="profilePageInputContainer-submissionBoxContainer">
+                <div className="profileButtonWithFixedWidth" style={{backgroundColor:theme.fontColor.greyText}}>
+                    <h4 style={{color:theme.fontColor.whiteText}}>
+                        Back
+                    </h4>
+                    <FontAwesomeIcon
+                     icon={faChevronCircleLeft}
+                        
+                            color={theme.fontColor.whiteText}
+                        />
+
+                </div>
+                <div className="profileButtonWithFixedWidth"  style={{backgroundColor:theme.fontColor.greenBackground,fontColor:theme.fontColor.blackColor}}>
+                    <h4 >
+                        Submit
+                    </h4>
+                    <FontAwesomeIcon
+                     icon={faChevronCircleRight}
+                        
+                            color={theme.fontColor.whiteText}
+                        />
+
+                </div>
             </div>
 
         </div>
