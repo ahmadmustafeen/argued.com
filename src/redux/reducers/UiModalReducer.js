@@ -6,7 +6,7 @@ import {
 } from '../actionTypes';
 import {WELCOME_MESSAGE_MODAL} from '../../constants/ModalNames'
 
-const initialState = { isVisible: false, screenName: "", data: [] };
+const initialState = { isVisible: true, screenName: "", data: [] };
 
 const UiModalReducer = (state = initialState, { type, payload }) => {
     switch (type) {

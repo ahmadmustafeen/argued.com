@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
-import { WelcomeModal, NotificationModal, RequestModal, OpportunityModal, TopicSuggestionModal, SubTopicModal, ReportModal, GeneralSuggestionModal } from '../'
+import { WelcomeModal, NotificationModal, RequestModal, OpportunityModal,
+    SelectTopicModal, TopicSuggestionModal, SubTopicModal, ReportModal, GeneralSuggestionModal } from '../'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { NOTIFICATION_MODAL, REQUESTS_MODAL, WELCOME_MESSAGE_MODAL } from '../../constants/ModalNames'
 
@@ -18,7 +19,7 @@ const AppModal = props => {
             case NOTIFICATION_MODAL:
                 return <NotificationModal />
             default:
-                return <h3>NOT FOUND</h3>
+                return <SelectTopicModal />
         }
     }
     return (
