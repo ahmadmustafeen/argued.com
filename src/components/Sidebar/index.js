@@ -18,6 +18,21 @@ const DATA = [
     { label: "Third Amendmend " },
     { label: "Fourth Amendmend " },
     { label: "Fifth Amendmend " },
+    { label: "Third Amendmend " },
+    { label: "Fourth Amendmend " },
+    { label: "Fifth Amendmend " },
+    { label: "Third Amendmend " },
+    { label: "Fourth Amendmend " },
+    { label: "Fifth Amendmend " },
+    { label: "Third Amendmend " },
+    { label: "Fourth Amendmend " },
+    { label: "Fifth Amendmend " },
+    { label: "Third Amendmend " },
+    { label: "Fourth Amendmend " },
+    { label: "Fifth Amendmend " },
+    { label: "Third Amendmend " },
+    { label: "Fourth Amendmend " },
+    { label: "Fifth Amendmend " },
     { label: "Sixth Amendmend " }]
 
 
@@ -51,20 +66,20 @@ const Sidebar = props => {
 
         }
     }
-
+console.log(store,"store")
     const history = useHistory();
     return (
         (store.SideBarReducer.normal ? <div className="sidebar-container" >
           
-          <div className={"sidebar-component-container"}>  {DATA.map(item => {
+          <div className={"sidebar-component-container"}>  {store?.CategoryReducer?.map(item => {
                 return (
-                    <SidebarComponent {...item} selectedComponent={selectedData === item.label} onClick={() => onClickImage(item.label)} />
+                    <SidebarComponent {...item} selectedComponent={selectedData === item.name} onClick={() => onClickImage(item.name)} />
                 )
             })}
             </div>
             <AdditionalSidebar
                 onClick={() => onClickImage("", true)}
-                visible={showsidebar} data={selectedData} />
+                visible={showsidebar} data={store?.CategoryReducer.find(item=>item.name===selectedData)?.subcategories} />
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
         </div> :
                 <a className="custom-sideBar-container" 

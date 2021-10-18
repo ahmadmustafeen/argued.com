@@ -12,6 +12,7 @@ const AdditionalSidebar = props => {
         visible,
         onClick
     } = props
+    console.log(data,"data")
     return(
         <div className="Additionalsidebar-container" style={{display:visible?"flex":"none"}}>
             <div style={{width:'90%',paddingTop:'20px',display:'flex',justifyContent:'flex-end'}}>
@@ -23,9 +24,9 @@ const AdditionalSidebar = props => {
 
             </div>
             {
-                ["","","","","","",].map(item=>{
+                data?.map(item=>{
                     return(
-                        <SidebarComponent label="Freedom of Speech"/>
+                        <SidebarComponent {...item}/>
                     )
                 })
             }

@@ -31,7 +31,7 @@ const Dashboard = props => {
         // dispatch(ActionWithoutPayload(FETCH_CATEGORY))
     }, [store])
     useEffect(()=>{
-        // dispatch(ActionWithoutPayload(FETCH_CATEGORY))
+        dispatch(ActionWithoutPayload(FETCH_CATEGORY))
         // dispatch(ActionWithPayload(FETCH_LATEST_VIDEO,{id:"5e3aa7559d265a745118f48e"}))
         // dispatch(ActionWithPayload(SIGN_IN,{username:"5e3aa7559d265a745118f48e",password:"sasdasd"}))
         // dispatch(ActionWithoutPayload(FETCH_PUBLIC_PLANS))
