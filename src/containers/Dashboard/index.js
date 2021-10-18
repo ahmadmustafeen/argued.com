@@ -11,6 +11,7 @@ import FAQ from '../FAQ'
 import MyGroups from '../MyGroups'
 import MyProfile from '../MyProfile'
 import ContactRequest from '../ContactRequest'
+import GroupRequest from '../GroupRequest'
 import ChatScreen from '../ChatScreen'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
@@ -70,6 +71,7 @@ const Dashboard = props => {
                     <Route path="/groups" component={MyGroups} />
                     <Route path="/profile" component={MyProfile} />
                     <Route path="/contact_request" component={ContactRequest} />
+                    <Route path="/group_request" component={GroupRequest} />
                 </Switch>
                 {/* <ChatScreen /> */}
 

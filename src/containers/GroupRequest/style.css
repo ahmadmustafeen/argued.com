@@ -1,0 +1,11 @@
+.Group-custom-textContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.Group-custom-textContainer h4{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+}

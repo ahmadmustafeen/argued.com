@@ -43,7 +43,7 @@ const FAQScreen = props => {
             <CustomHeader
                 icon={faUserFriends}
                 buttonIcon={faChevronCircleRight}
-                label="How Can We Help You?"
+                label="How can we help you?"
                 buttonText="My Contact"
                 searchIcon
             />
