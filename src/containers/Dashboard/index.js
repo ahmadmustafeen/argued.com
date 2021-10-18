@@ -13,6 +13,7 @@ import MyProfile from '../MyProfile'
 import ContactRequest from '../ContactRequest'
 import GroupRequest from '../GroupRequest'
 import ChatScreen from '../ChatScreen'
+import User from '../User'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
 import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_FAQ, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, FETCH_VIEWED_VIDEOS, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
@@ -72,6 +73,7 @@ const Dashboard = props => {
                     <Route path="/profile" component={MyProfile} />
                     <Route path="/contact_request" component={ContactRequest} />
                     <Route path="/group_request" component={GroupRequest} />
+                    <Route path="/user" component={User} />
                 </Switch>
                 {/* <ChatScreen /> */}
 
