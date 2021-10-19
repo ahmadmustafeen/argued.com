@@ -12,13 +12,31 @@ import { AppModal } from './components'
 import { useSelector } from 'react-redux';
 import { UseReduxHook } from './redux/customHooks/useReduxHook';
 import { ActionWithoutPayload, ActionWithPayload } from './redux/actions';
-import { DESTROY_MODAL, SHOW_MODAL } from './redux/actionTypes';
+import { DESTROY_MODAL, LOADER_RESOURCES, SHOW_MODAL } from './redux/actionTypes';
 import { WELCOME_MESSAGE_MODAL } from './constants/ModalNames';
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import {useHistory} from 'react-router-dom'
 
 function App() {
 
+  const history = useHistory()
+  const {store,dispatch} = UseReduxHook()
+  useEffect(()=>{
+    dispatch(ActionWithoutPayload(LOADER_RESOURCES))
+  },[])
+  // useEffect(()=>{
+  //   if(store?.UserProfileReducer?.token){
+  //     history.push("/")
+  //   }
+  // },[store.UserProfileReducer])
   return (
     <>
+    
+    <ToastContainer 
+    
+    position="bottom-left"
+    />
       {/* <Dashboard /> */}
       <Switch>
 

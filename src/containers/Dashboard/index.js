@@ -18,28 +18,27 @@ import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { ActionWithoutPayload, ActionWithPayload } from '../../redux/actions'
 import { DESTROY_MODAL, FETCH_CATEGORY, FETCH_FAQ, FETCH_LATEST_VIDEO, FETCH_PUBLIC_PLANS, FETCH_VIEWED_VIDEOS, SHOW_MODAL, SIGN_IN } from '../../redux/actionTypes'
 import { WELCOME_MESSAGE_MODAL } from '../../constants/ModalNames'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route,useHistory } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 
 const Dashboard = props => {
     const [isVisible, setIsVisible] = useState(false)
     const { store, dispatch } = UseReduxHook()
     const { UiModalReducer } = store
-
+const history = useHistory()
     useEffect(() => {
         setIsVisible(UiModalReducer?.isVisible)
-        // dispatch(ActionWithoutPayload(FETCH_CATEGORY))
+        // dispatch(ActionWithoutPayload(FETCH_LATEST_VIDEO))
     }, [store])
-    useEffect(()=>{
-        dispatch(ActionWithoutPayload(FETCH_CATEGORY))
-        // dispatch(ActionWithPayload(FETCH_LATEST_VIDEO,{id:"5e3aa7559d265a745118f48e"}))
-        // dispatch(ActionWithPayload(SIGN_IN,{username:"5e3aa7559d265a745118f48e",password:"sasdasd"}))
-        // dispatch(ActionWithoutPayload(FETCH_PUBLIC_PLANS))
-        // dispatch(ActionWithoutPayload(FETCH_FAQ))
-        dispatch(ActionWithoutPayload(FETCH_VIEWED_VIDEOS))
+    // useEffect(()=>{
+    //     if(!store.UserProfileReducer?.token){
+    //         toast("Login First")
+    //         // history.push("/signin")
+    //     }
+     
 
-
-    },[])
+    // },[])
 
 
     //this calls modal to be shown

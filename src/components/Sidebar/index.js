@@ -4,7 +4,7 @@ import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressBook, faChartLine, faChevronRight, faCloud, faEye, faFileContract, faUsers, } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom';
-
+import {useSelector} from 'react-redux'
 import { UseReduxHook } from '../../redux/customHooks/useReduxHook'
 import { theme } from '../../constants/theme'
 import { ActionWithPayload } from '../../redux/actions'
@@ -45,9 +45,15 @@ const Sidebar = props => {
     const [selectedData, setSelectedData] = useState("")
 
 
-    const { store, dispatch } = UseReduxHook()
+    // const { store, dispatch } = UseReduxHook()
+    const {SideBarReducer,CategoryReducer} = useSelector((store)=>{
+        return{
+            SideBarReducer:store.SideBarReducer,
+            CategoryReducer:store.CategoryReducer,
+        }
+    })
 
-    console.log(store.SideBarReducer, "SIDEBAR")
+    console.log(SideBarReducer, "SIDEBAR")
     const onClickImage = (label, override = false) => {
         if (override) {
             setSelectedData("")
@@ -66,12 +72,11 @@ const Sidebar = props => {
 
         }
     }
-console.log(store,"store")
     const history = useHistory();
     return (
-        (store.SideBarReducer.normal ? <div className="sidebar-container" >
+        (SideBarReducer.normal ? <div className="sidebar-container" >
           
-          <div className={"sidebar-component-container"}>  {store?.CategoryReducer?.map(item => {
+          <div className={"sidebar-component-container"}>  {CategoryReducer?.map(item => {
                 return (
                     <SidebarComponent {...item} selectedComponent={selectedData === item.name} onClick={() => onClickImage(item.name)} />
                 )
@@ -79,7 +84,7 @@ console.log(store,"store")
             </div>
             <AdditionalSidebar
                 onClick={() => onClickImage("", true)}
-                visible={showsidebar} data={store?.CategoryReducer.find(item=>item.name===selectedData)?.subcategories} />
+                visible={showsidebar} data={CategoryReducer.find(item=>item.name===selectedData)?.subcategories} />
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
         </div> :
                 <a className="custom-sideBar-container" 

@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
+import {useSelector,useDispatch} from 'react-redux'
 
 import { InputWithLabel } from "../../components";
+import { UseReduxHook } from "../../redux/customHooks/useReduxHook";
+import { ActionWithPayload } from "../../redux/actions";
+import { SIGN_IN } from "../../redux/actionTypes";
 
 const theme = {
   fontColor: {
@@ -15,6 +19,14 @@ const theme = {
 
 const Signin = (props) => {
   const history = useHistory();
+// const {store,dispatch} = UseReduxHook()
+const dispatch = useDispatch()
+const {UserProfileReducer} = useSelector(store=>{
+  return{
+    UserProfileReducer:store.UserProfileReducer
+  }
+})
+console.log("UserProfileReducer",UserProfileReducer)
 
   const [state, setState] = useState({});
   const onChange = (e) => {
@@ -23,6 +35,17 @@ const Signin = (props) => {
       [e.target.name]: e.target.value,
     });
   };
+
+
+  useEffect(()=>{
+    // console.log(store,"store")
+    if(UserProfileReducer?.token){
+      // history.push("/")
+    }
+  },[UserProfileReducer])
+  const handleSubmit = () => {
+  dispatch(ActionWithPayload(SIGN_IN,{...state,history}))
+  }
   const [hidden, setHidden] = useState(true);
 
   return (
@@ -40,9 +63,9 @@ const Signin = (props) => {
             <div className="auth-inner-right-form-container">
               <div className="input-field-container-auth">
                 <InputWithLabel
-                  name="email"
+                  name="username"
                   label="Email"
-                  value={state.email}
+                  value={state.username}
                   onChange={onChange}
                 />
               </div>
@@ -67,7 +90,7 @@ const Signin = (props) => {
                 </Link>
               </div>
               <div className="auth-inner-right-form-footer-submission">
-                <button onClick={()=> history.push("/")}>
+                <button onClick={()=> handleSubmit()}>
                   Login
                 </button>
                 <div className="button-overlapping-icon-container">

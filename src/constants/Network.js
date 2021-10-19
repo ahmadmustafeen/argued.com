@@ -5,7 +5,7 @@ export const API_ENDPOINTS = {
   signup: 'register',
   signin: 'login',
   category:'api/category',
-  fetch_latest_video:'api/opinion',
+  fetch_latest_video:'api/opinion/lates',
   signin:'api/user/login',
   public_plans:'api/public/plans',
   faq:'api/faq',
