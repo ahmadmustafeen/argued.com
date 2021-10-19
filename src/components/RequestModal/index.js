@@ -6,6 +6,7 @@ import { theme } from "../../constants/theme";
 import {ActionWithoutPayload} from '../../redux/actions'
 import {DESTROY_MODAL} from '../../redux/actionTypes'
 import {UseReduxHook} from '../../redux/customHooks/useReduxHook'
+import {useHistory} from 'react-router-dom'
 
 
 const NOTIFICATIONS = [{
@@ -26,6 +27,7 @@ const NOTIFICATIONS = [{
 
 }]
 const RequestModal = (props) => {
+    const history = useHistory()
     const {store,dispatch} = UseReduxHook()
     return (
         <div className="NotificationModal RequestModal">
@@ -46,7 +48,10 @@ const RequestModal = (props) => {
             <div className="NotificationModal-container">
 
 
-                <div className="NotificationModal-item-container request-item-container">
+                <a className="NotificationModal-item-container request-item-container" onClick={()=>{
+                    history.push("/contact_request")
+                    dispatch(ActionWithoutPayload(DESTROY_MODAL))
+                }}>
 
                     <div className="NotificationModalComponent-icon request-icon">
                         <FontAwesomeIcon
@@ -64,8 +69,11 @@ const RequestModal = (props) => {
                         />
                     </div>
 
-                </div>
-                <div className="NotificationModal-item-container request-item-container">
+                </a>
+                <a className="NotificationModal-item-container request-item-container" onClick={()=>{
+                    history.push("/group_request")
+                    dispatch(ActionWithoutPayload(DESTROY_MODAL))
+                }}>
 
                     <div className="NotificationModalComponent-icon request-icon">
                         <FontAwesomeIcon
@@ -83,7 +91,7 @@ const RequestModal = (props) => {
                         />
                     </div>
 
-                </div>
+                </a>
 
             </div>
         </div>
