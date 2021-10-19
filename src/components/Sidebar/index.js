@@ -74,7 +74,8 @@ const Sidebar = props => {
     }
     const history = useHistory();
     return (
-        (SideBarReducer.normal ? <div className="sidebar-container" >
+        <>
+         <div className="sidebar-container" >
           
           <div className={"sidebar-component-container"}>  {CategoryReducer?.map(item => {
                 return (
@@ -86,8 +87,9 @@ const Sidebar = props => {
                 onClick={() => onClickImage("", true)}
                 visible={showsidebar} data={CategoryReducer.find(item=>item.name===selectedData)?.subcategories} />
             {/* <button onClick={()=>setShowsidebar(!showsidebar)}>asdasd</button> */}
-        </div> :
+        </div> 
                 <a className="custom-sideBar-container" 
+                
                 //  onPointerOver={() => dispatch(ActionWithPayload(CHANGE_SIDEBAR, !store?.SideBarReducer?.normal))}
                  >
                     <div className="custom-sideBar">
@@ -160,8 +162,8 @@ const Sidebar = props => {
                         />
                     </div>
                 </a>
+                </>
         )
-    )
 }
 
 

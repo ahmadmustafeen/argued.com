@@ -38,10 +38,13 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
     font-size:20px;
     align-items: center;
 }
-
+.dashboardheader-container-left-top-icon:hover .custom-sideBar-container{
+    display: flex !important;
+}
 .dashboardheader-container-left-top-img{
     width: 80%;
     display: flex;
